@@ -447,6 +447,10 @@ background-size: cover;
 </body>
 <script type="text/javascript">
 	var audio = new Audio('piano.mp3');
+  audio.addEventListener('ended', function() {
+      this.currentTime = 0;
+      this.play();
+  }, false);
 	audio.play();
 	document.getElementById('audioButton').className="image img-circle";
 	function audioSwitch() {
