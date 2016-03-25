@@ -41,17 +41,54 @@
     height: 100%;    
 }
 
-body { 
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#full-screen-background-image {
+  z-index: -999;
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#wrapper {
+  position: relative;
+  width: 800px;
+  min-height: 400px;
+  margin: 100px auto;
+  color: #333;
+}
+
+html{
+
+     background-size:cover;
+     background-image:url(icon/bg.jpg);
+}
+
+/*body { 
 background: url(icon/bg.jpg) no-repeat center center fixed; 
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;
-}
+}*/
 
 </style>
 
 <body>
+
+<!-- <img alt="full screen background image" src="icon/bg.jpg" id="full-screen-background-image" />  -->
+
+<div class="wrapper">
+  
 
 <br>
 
@@ -382,9 +419,8 @@ background-size: cover;
 </div>
 
 <!-- Modal -->
-<div id="modal10" class="modal fade" role="dialog">
+<!-- <div id="modal10" class="modal fade" role="dialog">
   <div class="modal-dialog">
-    <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header text-center">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -396,7 +432,7 @@ background-size: cover;
     </div>
 
   </div>
-</div>
+</div> -->
 
 <br>
 
@@ -422,7 +458,7 @@ background-size: cover;
 			<a href="http://irm.cninfo.com.cn/ssessgs/S002047/index.html"><img src="icon/11.jpg" class="figure"></a>
 		</div>
 		<div class="col-xs-3">
-			<a href="#"><img src="icon/10.jpg" class="figure" data-toggle="modal" data-target="#modal10" ></a>
+			<a href="http://www.5i5j.com/loading"><img src="icon/10.jpg" class="figure" data-toggle="modal" data-target="#modal10" ></a>
 		</div>
 		<div class="col-xs-3">
 			<a href="#"><img id="audioButton" class="img-circle" onclick="audioSwitch()" src="http://cdn.osxdaily.com/wp-content/uploads/2013/07/music-app-icon-ios.jpg" height="100%" width="100%"></a>
@@ -436,7 +472,7 @@ background-size: cover;
 			<p class="text-center" style="color: white">投资信息</p>
 		</div>
 		<div class="col-xs-3">
-			<p class="text-center" style="color: white">联系方式</p>
+			<p class="text-center" style="color: white">友情链接</p>
 		</div>
 		<div class="col-xs-3">
 			<p class="text-center" style="color: white">音乐控制</p>
@@ -444,6 +480,7 @@ background-size: cover;
 	</div>
 </div>
 
+</div>
 </body>
 <script type="text/javascript">
 	var audio = new Audio('piano.mp3');
